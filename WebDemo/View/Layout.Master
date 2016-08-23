@@ -56,8 +56,16 @@
 		============================================ -->		
         <script src="/Content/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body onload="GetCategoryLv1()">
     <form id="form1" runat="server">
+    <asp:ScriptManager runat="server">
+                <Scripts>
+                    <asp:ScriptReference Path="Js/Layout.js" />
+                </Scripts>
+                <Services>
+                    <asp:ServiceReference  Path="~/View/DoAction.asmx" />
+                </Services>
+            </asp:ScriptManager>
      <header>
             <div class="header-top">
                 <div class="container">

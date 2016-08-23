@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebDemo
-{
-
-
-    public partial class _Default
-    {
+namespace $rootnamespace$ {
+    
+    
+    public partial class ViewSwitcher {
     }
 }
