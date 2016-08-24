@@ -25,8 +25,14 @@ namespace WebDemo.View
         {
             DBEntities aDbEntities = new DBEntities();
             List<tblCategory> aListCategories = new List<tblCategory>();
-            aListCategories = aDbEntities.tblCategories.Where(a => a.CatParent == CatParent).ToList();
-
+            List<tblCategory> aListTemp;
+            foreach (tblCategory aTemp in aDbEntities.tblCategories.Where(a => a.CatParent == "0").ToList())
+            {
+                aListCategories.Add(aTemp);
+                string ID = aTemp.ID.ToString();
+                aListTemp = aDbEntities.tblCategories.Where(a => a.CatParent == ID).ToList();
+                aListCategories.AddRange(aListTemp);
+            }
             string json = new JavaScriptSerializer().Serialize(aListCategories);
             return json;
         }

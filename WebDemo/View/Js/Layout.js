@@ -15,8 +15,17 @@ function GetCategoryLv1() {
                 var Menus = JSON.parse(data.d);
                 for (i = 0; i < Menus.length; i++) {
                     var obj = Menus[i];
-                    html += '<li id="menu'+obj.ID+'"><a href="' + obj.path + '">' + obj.CategoryName + '</a></li>';
+                    if (i == 0 && obj.CatParent == "0") {
+                        html += '<li id="menu' + obj.ID + '"><a href="' + obj.path + '">' + obj.CategoryName + '</a><ul class="sub-menu">';
+                    }
+                    else if (obj.CatParent != "0") {
+                        html += '<li><a href="' + obj.path + '">' + obj.CategoryName + '</a></li>';
+                    }
+                    else if (i != 0 && obj.CatParent == "0") {
+                        html += '</ul></li><li><a href="' + obj.path + '">' + obj.CategoryName + '</a><ul class="sub-menu">';
+                    }
                 }
+                html += '</ul></li>';
             }
             $("#nav").append(html);
             //$("#searchresultsB").html(data.d); // it's a quirk, but the JSON data comes back in a property called "d"; {"d":"Hello Aidy F"}
