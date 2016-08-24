@@ -21,11 +21,12 @@ namespace WebDemo.View
     {
 
         [WebMethod]
-        public string GetCateGory()
+        public string GetCateGory(string CatParent)
         {
             DBEntities aDbEntities = new DBEntities();
             List<tblCategory> aListCategories = new List<tblCategory>();
-            aListCategories = aDbEntities.tblCategories.Where(a => a.CatParent == "0").ToList();
+            aListCategories = aDbEntities.tblCategories.Where(a => a.CatParent == CatParent).ToList();
+
             string json = new JavaScriptSerializer().Serialize(aListCategories);
             return json;
         }

@@ -55,9 +55,14 @@
 		<!-- modernizr JS
 		============================================ -->		
         <script src="/Content/js/vendor/modernizr-2.8.3.min.js"></script>
+        <!-- jquery
+		============================================ -->		
+        <script src="/Content/js/vendor/jquery-1.11.3.min.js"></script>
+        
     </head>
-    <body onload="GetCategoryLv1()">
+    <body>
     <form id="form1" runat="server">
+        <asp:HiddenField ID="ListMenuLv1" runat="server"/>
     <asp:ScriptManager runat="server">
                 <Scripts>
                     <asp:ScriptReference Path="Js/Layout.js" />
@@ -210,103 +215,7 @@
                                 <div class="mainmenu">
                                     <nav>
                                         <ul id="nav">
-                                            <li class="current"><a href="Main.aspx">Home</a>
-                                            </li>
-                                            <li><a href="shop-grid.html">Thời trang mùa hè</a>
-                                                <div class="megamenu">
-                                                    <div class="megamenu-list clearfix">
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Clothing</a>
-                                                            <a href="#">Blazers</a>
-                                                            <a href="#">Jackets</a>
-                                                            <a href="#">Collections</a>
-                                                            <a href="#">T-Shirts</a>
-                                                        </span>
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Dresses</a>
-                                                            <a href="#">Cocktail</a>
-                                                            <a href="#">Sunglass</a>
-                                                            <a href="#">Evening</a>
-                                                            <a href="#">Footwear</a>
-                                                        </span>
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Handbags</a>
-                                                            <a href="#">Bootees Bags</a>
-                                                            <a href="#">Furniture</a>
-                                                            <a href="#">Exclusive</a>
-                                                            <a href="#">Jackets</a>
-                                                        </span>
-                                                        <span class="no-margin">										
-                                                            <a href="#" class="mega-title">Jewellery</a>
-                                                            <a href="#">Earrings</a>
-                                                            <a href="#">Nosepins</a>
-                                                            <a href="#">Braclets</a>
-                                                            <a href="#">Bangels</a>
-                                                        </span>
-                                                        <span class="no-margin">										
-                                                            <a href="#" class="mega-banner">
-                                                                <img src="/Content/img/mega-banner.jpg" alt="">
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li><a href="shop-grid.html">Thời trang mùa đông</a>
-                                                <div class="megamenu">
-                                                    <div class="megamenu-list clearfix">
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Clothing</a>
-                                                            <a href="#">Blazers</a>
-                                                            <a href="#">Jackets</a>
-                                                            <a href="#">Collections</a>
-                                                            <a href="#">T-Shirts</a>
-                                                        </span>
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Dresses</a>
-                                                            <a href="#">Cocktail</a>
-                                                            <a href="#">Sunglass</a>
-                                                            <a href="#">Evening</a>
-                                                            <a href="#">Footwear</a>
-                                                        </span>
-                                                        <span>											
-                                                            <a href="#" class="mega-title">Handbags</a>
-                                                            <a href="#">Bootees Bags</a>
-                                                            <a href="#">Furniture</a>
-                                                            <a href="#">Exclusive</a>
-                                                            <a href="#">Jackets</a>
-                                                        </span>
-                                                        <span class="no-margin">										
-                                                            <a href="#" class="mega-title">Jewellery</a>
-                                                            <a href="#">Earrings</a>
-                                                            <a href="#">Nosepins</a>
-                                                            <a href="#">Braclets</a>
-                                                            <a href="#">Bangels</a>
-                                                        </span>
-                                                        <span class="no-margin">										
-                                                            <a href="#" class="mega-banner">
-                                                                <img src="/Content/img/mega-banner.jpg" alt="">
-                                                            </a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li><a href="shop-grid.html">Phụ kiện</a></li>
-                                            <li><a href="index.html">Pages</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="#" class="mega-title">Other Pages</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="blog.html">Blog Page</a></li>
-                                                    <li><a href="blog-details.html">Blog Details Page</a></li>
-                                                    <li><a href="account.html">My Account</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                                    <li><a href="product-details.html">Product Details</a></li>
-                                                    <li><a href="shop-grid.html">Shop Grid</a></li>
-                                                    <li><a href="shop-list.html">Shop List</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="Contact.aspx">Contact Us</a></li>
+                                            
                                         </ul>
                                     </nav>
                                 </div>        
@@ -560,9 +469,7 @@
         </div>
         <!--End of Quickview Product-->	       
         
-		<!-- jquery
-		============================================ -->		
-        <script src="/Content/js/vendor/jquery-1.11.3.min.js"></script>
+		
         
 		<!-- bootstrap JS
 		============================================ -->		
